@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CCBC Site</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+  <%=render 'layouts/header' %>
+ 
+    <div id="navigation">
+  <%=render 'layouts/navigation' %>
+    </div>
+    <br>
+<%= yield %>
+  
+   <%=render 'layouts/footer' %>
+  </div>
+  
+</body>
+</html>

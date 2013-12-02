@@ -1,0 +1,24 @@
+<h1> <%= @year %> <%= @title %></h1>
+
+<article id="prog">
+     <% @Events.each do | event | %>
+ 
+  <% if event.date.future? ||event.date == Date.current %>
+  
+  <section>
+    
+    <li> Title: <%= event.event %> </li>
+
+    <li> Date: <%= event.date %> </li>
+    
+    <li> Description: <%= event.description %> </li>
+    <br>
+    
+ 
+  </section>
+  
+  <% end %>  
+  <% end %>  
+  <br>
+  <a href= "/admin"> Log In As Admin</a>
+</article>    
